@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <style>
+        .biriyani .title{
+            width: 200px;
+            height: 25px;
+            margin: 0px;
+            padding: 10px,0px,10px,0px;
+        }
+        .biriyani  .title{
+            font-weight: bold;
+            font-size: 15px;
+            background-color: rgb(168, 230, 182);
+            position: relative;
+            bottom: 5px;
+            text-align: center;
+
+        }
+
+         .biriyani {
+            border: 2px solid black ;
+            width: 205px;
+            background-color: rgb(228, 174, 121);
+            margin: 1%;
+            flex-basis: 10%;
+            /*padding: 1%;*/
+            
+            
+        }
+
+        .biriyani a{
+            
+            height: 5%;
+            font-size: medium;
+            color: white;
+            background-color: black;
+            text-align: center;
+            display: block;
+        }
+
+        .biriyani a:hover{
+            background-color: rgb(230, 152, 152);
+            cursor: pointer;
+            
+        }
+
+        /*main .biriyani{
+            float: left;
+            margin: left 10px;
+        }*/
+        .content{
+            display: flex;
+            flex-wrap: wrap;
+            /*border: 2px solid black;*/
+            /*width:250px;.0*/
+
+       
+     }
+        .b{
+            width: 200px;
+        }
+
+        /*li{
+         float: left;   
+        }*/
+        footer{
+            background-color: rgb(240, 168, 224);
+            
+        }
+        body{
+            /*background: linear-gradient(90deg, rgb(233, 99, 237), rgb(20, 239, 246), rgb(216, 203, 99));*/
+            background-image:url(https://st2.depositphotos.com/3542901/8137/i/950/depositphotos_81373736-stock-photo-blur-image-of-restaurant-or.jpg);
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        h1{
+            background: linear-gradient(90deg, rgb(245, 91, 125), rgb(248, 144, 74), rgb(252, 235, 103));
+            color: darkviolet;
+            font-family: unset;
+            text-align: center;
+        }
+
+     h1:hover {
+    background-color: rgb(255, 0, 115);
+    transform: scale(1.2);
+    
+     }
+
+        
+        h1{
+            /*animation: rt1 7s linear infinite;*/
+            animation:  rt1 7s alternate-reverse;
+        } 
+
+        
+        @keyframes rt1 {
+            form{
+                transform: translatex(900px);
+
+            }
+            to{
+                transform: translateX(-900px);
+            }
+        }
+         
+        footer:hover{
+            background: linear-gradient(90deg, rgb(232, 111, 161), rgb(242, 112, 95), rgb(206, 32, 43));
+            transform: scale(1.01);
+            
+        }
+        .con{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .js{
+            display: flex;
+            flex-wrap: wrap;  
+        }
+        .icd{
+            display: flex;
+            flex-wrap: wrap;  
+        } 
+
+
+        .poster{
+            /*position: fixed;*/
+            position: sticky;
+            top: 0px;
+  }
+  .biriyani:hover{
+   transform: scale(1.1);
+
+  }
+    
+</style>
+</head>
+<body>
+     <header> 
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <!-- <img src="data:image/png;base64,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"   width="50px",heigh="50px" alt=""> -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./biriyani.html">Home</a>
+                   
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a></li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">contact</a>
+                    </li>
+
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                   
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+
+    <h1 class="poster">Mounika Restaurant</h1>
+   <main>
+   <div><video  loop autoplay preload="metadata" width="100%" height=""><source src="./restaurant.mp4">type=<video></video>
+    <mp4></mp4></video></div>
+
+    <!-- <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1at1AQqKFipOmgCQBtvavh5jHxTM5BhVHZg&s" class="d-block "  width="100px" height="100px" alt="..." >
+        </div>
+        <div class="carousel-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrQAUhn-vT5nWL0ba7kWwvhvpCUi_XF5Z02g&s" class="d-block "  width="100px" height="100px"alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmX7_CnMqbdu7qHFBS-Cp2acwC-moRwus7rg&s" class="d-block "  width="100px" height="100px"alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div> -->
+
+
+    <!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1at1AQqKFipOmgCQBtvavh5jHxTM5BhVHZg&s" class="d-block " width="100px" height="100px" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrQAUhn-vT5nWL0ba7kWwvhvpCUi_XF5Z02g&s" class="d-block "  width="100px" height="100px" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmX7_CnMqbdu7qHFBS-Cp2acwC-moRwus7rg&s" class="d-block "  width="100px" height="100px" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div> -->
+
+  
+   
+    <h1>Non Veg special </h1>
+
+    <div class="content">
+
+        
+        <div class="biriyani">       
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4RFdQOjfWYB-KGZ-RV3fvu2iAYv6AHT6E0Q&s" width="200",heigh="500">
+            <p class="title"> Nonveg Biriyani</p>
+              <p class="b"> According to historian Lizzie Collingham, the modern biryani developed in the royal kitchens of the Mughal Empire (1526–1857).</p>
+               <p>Biryani is a celebration of all that is great about Indian food – the heady aromas, the vibrant colours, the fluffy rice and those addictive curry flavours. </p>
+              <a href="./orderfood.html">see here</a>
+        </div>
+        <div class="biriyani">       
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaln-As3GMw6mJVHN143zV0voP9GhFTuaccA&s" width="200",heigh="500">
+            <p class="title">  Tandoori</p>
+              <p class="b"> According to historian Lizzie Collingham, the modern biryani developed in the royal kitchens of the Mughal Empire (1526–1857).</p>
+             <p>Biryani is a celebration of all that is great about Indian food – the heady aromas, the vibrant colours, the fluffy rice and those addictive curry flavours.</p>
+           <a href="./display2.html">see here</a>
+        </div>
+        <div class="biriyani">       
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu6DlKuqpGnYa8FOFhUIGhw2e9GClDLC8BgA&s" width="200",heigh="500">
+            <p class="title">fried foods</p>
+              <p class="b"> According to historian Lizzie Collingham, the modern biryani developed in the royal kitchens of the Mughal Empire (1526–1857).</p>
+               <p>Biryani is a celebration of all that is great about Indian food – the heady aromas, the vibrant colours, the fluffy rice and those addictive curry flavours.</p>
+              <a href="./display3.html">see here</a>
+            </div>
+
+            <div class="biriyani">    
+             
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA9dhXyfzP7yi-tfDg2hE8gITAc63TtjI3qA&s" width="200",heigh="500">
+              <p class="title">fast food</p>
+                <p class="b"> According to historian Lizzie Collingham, the modern biryani developed in the royal kitchens of the Mughal Empire (1526–1857).</p>
+                 <p>Biryani is a celebration of all that is great about Indian food – the heady aromas, the vibrant colours, the fluffy rice and those addictive curry flavours. </p>
+                <a href="./display3.html">see here</a>
+          </div>
+          <div class="biriyani">       
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNXMWkk9f525GozzEc6KMlIFgNk58sAQUtfw&s" width="200",heigh="500">
+              <p class="title">Non Veg Meals</p>
+                <p class="b"> According to historian Lizzie Collingham, the modern biryani developed in the royal kitchens of the Mughal Empire (1526–1857).</p>
+               <p>Biryani is a celebration of all that is great about Indian food – the heady aromas, the vibrant colours, the fluffy rice and those addictive curry flavours.</p>
+             <a href="./display2.html">see here</a>
+          </div>
+          </div>
+
+            </div>        
+
+    <h1>Veg special</h1>
+
+    <div class="con">
+
+    <div class="biriyani">       
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0UDFToDyhjtRB72FIa9EXeEaZ8_yt5EYhbg&s" width="200",heigh="500">
+        <p class="title">Veg Biriyani</p>
+          <p class="b"> According to historian Lizzie Collingham, the modern biryani developed in the royal kitchens of the Mughal Empire (1526–1857).</p>
+         <p>Biryani is a celebration of all that is great about Indian food – the heady aromas, the vibrant colours, the fluffy rice and those addictive curry flavours.</p>
+       <a href="./veg.html">see here</a>
+    </div>
+
+    <div class="biriyani">       
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoAfj2gJJrFDvseK83cmwZwiRz7M324RU8hA&s" width="200",heigh="500">
+        <p class="title">Veg Meals </p>
+  <p class="b"> According to historian Lizzie Collingham, the modern biryani developed in the royal kitchens of the Mughal Empire (1526–1857).</p>
+         <p>Biryani is a celebration of all that is great about Indian food – the heady aromas, the vibrant colours, the fluffy rice and those addictive curry flavours.</p>
+       <a href="./display2.html">see here</a>
+    </div>
+
+    <div class="biriyani">       
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu6DlKuqpGnYa8FOFhUIGhw2e9GClDLC8BgA&s" width="200",heigh="500">
+        <p class="title"> veg fried foods</p>
+          <p class="b"> According to historian Lizzie Collingham, the modern biryani developed in the royal kitchens of the Mughal Empire (1526–1857).</p>
+           <p>Biryani is a celebration of all that is great about Indian food – the heady aromas, the vibrant colours, the fluffy rice and those addictive curry flavours.</p>
+          <a href="./display3.html">see here</a>
+        </div>
+
+    <div class="biriyani">       
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6-HH9dDlpN_fwQhFqiRy00-IhK04fSxDIPA&s" width="200",heigh="500">
+        <p class="title">Veg Fast Food</p>
+          <p class="b"> According to historian Lizzie Collingham, the modern biryani developed in the royal kitchens of the Mughal Empire (1526–1857).</p>
+         <p>Biryani is a celebration of all that is great about Indian food – the heady aromas, the vibrant colours, the fluffy rice and those addictive curry flavours.</p>
+       <a href="./display2.html">see here</a>
+    </div>
+
+    <div class="biriyani">       
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpnxEXf5B5fRF60cWrRX9Oghjtqcs9Cq6q_g&s" width="200",heigh="500">
+        <p class="title">veg tandoori</p>
+          <p class="b"> According to historian Lizzie Collingham, the modern biryani developed in the royal kitchens of the Mughal Empire (1526–1857).</p>
+         <p>Biryani is a celebration of all that is great about Indian food – the heady aromas, the vibrant colours, the fluffy rice and those addictive curry flavours.</p>
+       <a href="./display2.html">see here</a>
+    </div>
+    </div>
+
+<h1> juices & Shakes</h1>
+
+<div class="js">
+    <div class="biriyani">       
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkZHbqRbuvfzQ_6D-IkHV324GQwdgzJLCx1A&s" width="200",heigh="500">
+        <p class="title"> fresh juice</p>
+          <p class="b"> According to historian Lizzie Collingham, the modern biryani developed in the royal kitchens of the Mughal Empire (1526–1857).</p>
+           <p>Biryani is a celebration of all that is great about Indian food – the heady aromas, the vibrant colours, the fluffy rice and those addictive curry flavours. </p>
+          <a href="./frish.html">see here</a>
+    </div>
+
+    <div class="biriyani">       
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSonoh45LBRGipwneF3W8FsK4enbz6uGVG_zw&s" width="200",heigh="500">
+        <p class="title"> juice</p>
+          <p class="b"> According to historian Lizzie Collingham, the modern biryani developed in the royal kitchens of the Mughal Empire (1526–1857).</p>
+           <p>Biryani is a celebration of all that is great about Indian food – the heady aromas, the vibrant colours, the fluffy rice and those addictive curry flavours. </p>
+          <a href="./orderfood.html">see here</a>
+    </div>
+
+    <div class="biriyani">       
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY7Cn0eUo6R1lKMl8J0gMZP1XW87C5I4Iy7w&s" width="200",heigh="500">
+        <p class="title"> Bakes</p>
+          <p class="b"> According to historian Lizzie Collingham, the modern biryani developed in the royal kitchens of the Mughal Empire (1526–1857).</p>
+           <p>Biryani is a celebration of all that is great about Indian food – the heady aromas, the vibrant colours, the fluffy rice and those addictive curry flavours. </p>
+          <a href="./orderfood.html">see here</a>
+    </div>
+
+    <div class="biriyani">       
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZEzKa5-Twwj5YnwUAkc1ITHF1S0jt9YKoWg&s" width="200",heigh="500">
+        <p class="title">snacks</p>
+          <p class="b"> According to historian Lizzie Collingham, the modern biryani developed in the royal kitchens of the Mughal Empire (1526–1857).</p>
+           <p>Biryani is a celebration of all that is great about Indian food – the heady aromas, the vibrant colours, the fluffy rice and those addictive curry flavours.</p>
+          <a href="./orderfood.html">see here</a>
+    </div>
+
+    <div class="biriyani">       
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb3Azg8H4A2mmXxNiqSEo19LDRIFmu_f4LgA&s" width="200",heigh="500">
+        <p class="title"> sweets</p>
+          <p class="b"> According to historian Lizzie Collingham, the modern biryani developed in the royal kitchens of the Mughal Empire (1526–1857).</p>
+           <p>Biryani is a celebration of all that is great about Indian food – the heady aromas, the fluffy rice and those addictive curry flavours. </p>
+          <a href="./orderfood.html">see here</a>
+    </div>
+</div>
+
+
+<h1>Ice creem & Desert</h1>
+
+<div class="icd">
+
+    <div class="biriyani">       
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD_34o9X7UdKrFrTBokmhintlJLedv-z5XZA&s" width="200",heigh="500">
+        <p class="title"> Ice creem</p>
+          <p class="b"> According to historian Lizzie Collingham, the modern biryani developed in the royal kitchens of the Mughal Empire (1526–1857).</p>
+           <p>Biryani is a celebration of all that is great about Indian food – the heady aromas, the vibrant colours, the fluffy rice and those addictive curry flavours. </p>
+          <a href="./ice.html">see here</a>
+    </div>
+
+    <div class="biriyani">       
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBh9XzTS-ggo5cW8XQyHUBRmmIea_-5Ll06g&s" width="200",heigh="500">
+        <p class="title"> desserts</p>
+          <p class="b"> According to historian Lizzie Collingham, the modern biryani developed in the royal kitchens of the Mughal Empire (1526–1857).</p>
+           <p>Biryani is a celebration of all that is great about Indian food – the heady aromas, the vibrant colours, the fluffy rice and those addictive curry flavours. </p>
+          <a href="./orderfood.html">see here</a>
+    </div>
+
+    <div class="biriyani">       
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNmCZS_QcA13xKq8og3xn3stpFlieSQhFd2g&s" width="200",heigh="500">
+        <p class="title"> faludas</p>
+          <p class="b"> According to historian Lizzie Collingham, the modern biryani developed in the royal kitchens of the Mughal Empire (1526–1857).</p>
+           <p>Biryani is a celebration of all that is great about Indian food – the heady aromas, the vibrant colours, the fluffy rice and those addictive curry flavours. </p>
+          <a href="./orderfood.html">see here</a>
+    </div>
+
+   
+  
+    
+</div>
+
+</main> 
+    <footer>
+        <div class="about">
+          <h3>About</h3>
+          <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Demo</a></li>
+              <li><a href="#">customer</a></li>
+              <li><a href="#">inverst</a></li>
+              <li><a href="#">Team service</a></li>
+          </ul>
+      </div>
+
+      <div class="social media">
+          <h3>social media</h3>
+          <ul>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Youtube</a></li>
+              <li><a href="#">Telgram</a></li>
+          </ul>
+      </div>
+
+
+      <div class="contact">
+          <h3>contact</h3>
+          <ul>
+              <li><a href="#">Jobs</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">contact</a></li>
+              <li><a href="#">shoping</a></li>
+              <li><a href="#">return</a></li> 
+          </ul>
+      </div>
+       
+       </footer>
+
+</body>
+</html>

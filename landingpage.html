@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   *{
+    margin: 0%;
+   }
+    #container{
+        background-image: url('./img.html/bot.jpg');
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+        transition: 2s;
+       
+        
+    }
+    
+    #arrow-1{
+        position: absolute;
+        top: 50%;
+       cursor: pointer;
+    }
+    #arrow-2{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: rotateY(180deg);
+        cursor: pointer;
+    }
+
+    .land{
+        display: flex;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+
+       }
+       .land:hover{
+        transform: scale(1);
+       }
+
+       .box{
+        opacity: 0.5;
+       }
+
+       .dis{
+        opacity: 1;
+       }
+</style>
+<body>
+
+    <div class="land">
+        <img class="box dis" src="./img.html/bot.jpg" alt=""  height="60px">
+        <img class="box" src="./img.html/nature.jpg" alt=""  height="60px">
+        <img class="box" src="./img.html/sea.jpg" alt=""  height="60px">
+        <img class="box" src="img.html/mou.jpg" alt=""  height="60px">
+        <img class="box" src="./img.html/snow.jpg" alt=""  height="60px">
+
+    </div> 
+
+
+<div class="arrow-1">
+   <img onclick="prev()"  id="arrow-1" src="./img.html/arro.jpg" alt="" height="20px">
+   <img onclick="next()"  id="arrow-2" src="./img.html/arro.jpg" alt="" height="20px">
+</div>
+
+<div id="container">
+
+</div>
+
+
+<script>
+     let arr = ['./img.html/bot.jpg','./img.html/nature.jpg', './img.html/sea.jpg','./img.html/mou.jpg','./img.html/snow.jpg'];
+     let i=0;
+     let con = document.getElementById('container');
+     let img=document.getElementsByClassName('box')
+     let next = ()=>{
+        img[i].classList.remove('dis');
+        i++;
+        if(i==arr.length)
+        {
+            i=0;
+        }
+        img[i].classList.add('dis');
+        con.style.backgroundImage='url("'+arr[i]+'")';
+        console.log(i)
+         }
+
+     let prev = ()=>{
+        img[i].classList.remove('dis');
+        --i;
+       if (i==-1)
+       {
+        i=arr.length-1
+       }
+       img[i].classList.add('dis');
+      con.style.backgroundImage='url("'+arr[i]+'")';
+        console.log(1);
+        }
+   
+</script>
+
+</body>
+</html>

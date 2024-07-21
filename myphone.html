@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./phone.js"></script>
+    <style>
+      *{
+        margin: 0%;
+      }
+      body{
+        position: relative;
+      }
+        #container{
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+           width: fit-content;  
+       }
+
+        button{
+        background-color:rgb(208, 205, 201);
+            font-size: large;
+            cursor: pointer;
+            margin: 5px;
+            padding: 10px;
+            text-align: center;
+           
+          
+        
+        }
+      
+        button:hover{
+        background-color:rgb(208, 205, 201);
+        font-weight: bolder;
+            
+         }
+
+         .pro{
+          border: 1px solid rgb(225, 225, 225);
+          margin: 50px;
+          background-color: rgb(241, 241, 241);
+          margin-left: 7%;
+          
+          
+          
+        }
+         #container{
+          column-gap: 40px;
+         }
+         /* .b{
+          width: 200px;
+          height: 100px;
+         } */
+         .con{
+          
+          margin: 0px;
+          padding: 10px;
+          justify-content: space-around;
+          
+          display: flex;
+            flex-wrap: nowrap;  
+            
+           }
+           .off{
+            width: 200px;
+           }
+
+           footer{
+            background: linear-gradient(90deg, rgb(56, 63, 88), rgb(74, 82, 110), rgb(38, 40, 66));
+            display: flex;
+            justify-content: space-around;
+            padding: 100PX;
+            margin-bottom: 5%;
+
+          
+           
+           }
+
+           .about{
+            border:   0px solid rgb(77, 97, 121);
+            
+           }
+
+           .socialmedia{
+            border: 0px solid rgb(77, 97, 121);
+            
+           }
+
+           .contact{
+            border:   0px solid rgb(77, 97, 121);
+            
+           }
+           
+
+           li{
+            margin: 10px;
+           }
+
+           .land{
+       
+        height: 75vh;
+        width: 100vw;
+        background-size: cover;
+        transition: 2s;
+       
+      }
+    #carouselExample{
+      position: absolute;
+      top: 11%;
+    }
+         
+    #arrow-1{
+        position: absolute;
+        bottom: 90.3%;
+       cursor: pointer;
+    }
+    #arrow-2{
+        position: absolute;
+        right: 0;
+        
+        bottom: 90.3%;
+        transform: rotateY(180deg);
+        cursor: pointer;
+    }
+
+
+/* 
+    .land{
+        display: flex;
+        position: absolute;
+        margin-top: 1%;
+        position: absolute;
+         } */
+
+
+       .land:hover{
+        transform: scale(1);
+       }
+
+       /* .box{
+        opacity: 0.2;
+       } */
+
+       .dis{
+        opacity: 1;
+       }
+
+
+       .land{
+        justify-content: space-between;
+        margin-top: 40;
+        
+  }
+
+  .carouselslide{
+      margin: 50px;
+  }
+
+
+  .containe {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+
+header {
+    background-color: #ecd7d7;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+header h1 {
+    font-size: 2.8rem;
+    color: #1e1c1c;
+    margin-left: 20px;
+    text-align: center;
+    top: 20px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 40px;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #007bff;
+}
+
+
+
+
+#btn{
+  font-size: 25px;
+  position: absolute;
+  top :1%;
+  right: 84%;
+  
+}
+
+
+.navbar-brandimg{
+  border-top-left-radius: 10%;
+  
+}
+h1:hover{
+   color: darkred;
+   transform: scale(1.1);
+}
+
+.conta{
+  position: relative;
+  margin-bottom: 10%;
+}
+     .off{
+      border: 2px solid black;
+     }
+          
+        
+
+      </style> 
+  </head>
+<body>
+
+  <header> 
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIZKrWtIckyT2TZVEZXfEgiMWhtlvwWBP032cVoVmq0lD9GgdnIV6FlreS4YztI8RcXg&s"  width="50px" height="50px" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="">profile</a>
+               </li>
+              
+              <li class="cart">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7rjc2Uar8P2QUVwXtzNH2aoxxLp17EmHQtQ&s" width="40px" height="30px" alt="">
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="">Home</a>
+               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              
+              <li class="nav-item">
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+             
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+      <div class="contain">
+        <h1>YOUR CHOICE</h1>
+        <nav>
+            <ul>
+                <li><a href="">T-Shirt For Boys</a></li>
+                <li><a href="">kurthi's</a></li>
+                <li><a href="">Western Model</a></li>
+                <li><a href="">shirts</a></li>
+                <li><a href="">Kids wear</a></li>
+                <li><a href="">sarees</a></li>
+                <li><a href="">weeding collections</a></li>
+                <li><a href="">T-shirt For Girls</a></li>
+                <li><a href="">Today Offers</a></li>
+                <li><a href="">Home&kitchen</a></li>
+                <li><a href="">Electronics</a></li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<h2>Daily offers</h2>
+
+
+<div class="land">
+        <img class="box dis" src="" alt=""  height="60px">
+        <img class="box" src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/3.0/Halos/footwear._SS300_QL85_FMpng_.png" alt=""  height="100px">
+        
+        <img class="box" src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/3.0/Halos/watches._SS300_QL85_FMpng_.png" alt=""  height="100px">
+        <img class="box" src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/Flip/Springsummerflip/Halo/main/V1/handbags._SS300_QL85_FMpng_.png" alt=""  height="100px">
+        <img class="box" src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/3.0/CelebHalo/mens._SS300_QL85_FMpng_.png" alt=""  height="100px">
+        <img class="box" src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/3.0/Halos/watches._SS300_QL85_FMpng_.png" alt=""  height="100px">
+        <img class="box" src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/Flip/Springsummerflip/Halo/main/V1/womens._SS300_QL85_FMpng_.png" alt=""  height="100px">
+        <img class="box" src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/Flip/Springsummerflip/Halo/main/V1/luggage._SS300_QL85_FMpng_.png" alt=""  height="100px">
+
+        <img class="box" src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/3.0/Halos/watches._SS300_QL85_FMpng_.png" alt=""  height="100px">
+        <img class="box" src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/3.0/Halos/handbags._SS300_QL85_FMpng_.png" alt=""  height="100px">
+        <img class="box" src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/3.0/CelebHalo/mens._SS300_QL85_FMpng_.png" alt=""  height="100px">
+
+        <img class="box" src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/Flip/Springsummerflip/Halo/main/V1/womens._SS300_QL85_FMpng_.png" alt=""  height="100px">
+        <img class="box" src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/3.0/Halos/handbags._SS300_QL85_FMpng_.png" alt=""  height="100px">
+        <img class="box" src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/Flip/Springsummerflip/Halo/main/V1/jewellery._SS300_QL85_FMpng_.png" alt=""  height="100px">
+        <div class="arrow">
+          <img onclick="prev()"  id="arrow-1" src="./img/arro.jpg" alt="" height="20px">
+          <img onclick="next()"  id="arrow-2" src="./img/arro.jpg" alt="" height="20px">
+       </div>   
+    </div> 
+
+   
+  
+
+
+ 
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/3.0/PC/hero/Premium-Luggage_2._CB555362677_.png" class="d-block "  width="1500px" height="400px" alt="..." >
+    </div>
+    <div class="carousel-item">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/3.0/PC/hero/Monsoon-Friendly-Footwear_4._CB555362677_.png" class="d-block "  width="1500px" height="400px"alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/3.0/PC/hero/Chains-bracelets-more_0._CB555362677_.png" class="d-block "  width="1500px" height="400px"alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+</div>
+
+   
+
+<div id="container">
+</div>
+
+<!-- <div id="conta"></div> -->
+
+<div class="con">
+  <div  class="off"><img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT_RB2lUGvvx5eAmY2_IuKSf9S6b7LZ8OQLdxGtETAFywma89sGIUdrECnC8hs_XcFy85LCrHKMelGzoo2dOLBQ_U9on2UjjTjGVUg1IbCt5_Z-Nuz_G3x1&usqp=CAE" width="100px" height="100px">
+  <p>Pones</p>
+  <p>up to 70% off</p>
+  </div>
+    
+ <div class="off"><img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR6zGiRpOFsK7-8SJZ0oTcH0OuVEALCCbCAQJn0P58Nag2pzaI3ruUCp9hQmU63xPab7JCql5keI8tdMM4_kHXSw1ZoxCX3gfixzbfjVMx8O4BwI23GT_3t&usqp=CAE"  width="100px" height="100px">
+<p>up to 70% off</p>
+</div>
+ <div class="off"><img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQgkk1GUnbEAFSgufPtMewu29-0jVIFRUEzjOeb1jkOVPW96Gkocda93Nm0Ztu7j9S9myCtnYPtr7FLgV5GZrmPEe9OSyfWY1XaSiNUnx3VJakY5YI32Hm0IA&usqp=CAE"  width="100px" height="100px">
+<p>up to 70% off</p>
+</div>
+
+</div>
+</div>
+
+  
+
+<div id="btn">0</div>
+
+
+
+
+
+ <footer>
+  <h1>Back To Top</h1>
+   <div class="about">
+     <h3>About</h3>
+     <ul>
+         <li><a href="#">Blog</a></li>
+         <li><a href="#">Demo</a></li>
+         <li><a href="#">customer</a></li>
+         <li><a href="#">inverst</a></li>
+         <li><a href="#">Team service</a></li>
+     </ul>
+ </div>
+ 
+ <div class="social media">
+     <h3>Connect with Us</h3>
+     <ul>
+         <li><a href="#">Instagram</a></li>
+         <li><a href="#">Facebook</a></li>
+         <li><a href="#">Twitter</a></li>
+         <li><a href="#">Youtube</a></li>
+         <li><a href="#">Telgram</a></li>
+     </ul>
+ </div>
+ 
+ 
+ <div class="contact">
+     <h3>Make Money with Us</h3>
+     <ul>
+         <li><a href="#">Jobs</a></li>
+         <li><a href="#">Support</a></li>
+         <li><a href="#">contact</a></li>
+         <li><a href="#">shoping</a></li>
+         <li><a href="#">return</a></li> 
+     </ul>
+ </div>
+  
+  </footer>
+
+
+  <script>
+      
+         let store=[
+            
+
+              {
+                id:1,
+                product:"samsung",
+                model:"s24-ultra",
+                price:100000,
+                
+                image:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRuMowHGPS5l75u-EuteeSJFg9E5SUInrTTLGJ1XIh84_9L_oPUAlUoSi7pLWSoLN5IUxQsZMqpI6hpPFLhbWMQ-SG0VrG3mg&usqp=CAE" 
+                
+              },
+              
+              {
+                id:5,
+                product:"iphone",
+                model:"iphone14",
+                price:90000,
+                image:"https://m.media-amazon.com/images/I/71BgjQSgH2L._SX522_.jpg"
+              },
+
+            {
+                id:6,
+                product:" Motorola Razr",
+                model:"redmi 12",
+                price:90000,
+                image:"https://cdn.mos.cms.futurecdn.net/bmobv4awZRVqC73Ztj4Lui-970-80.jpg.webp"
+              },
+
+              
+              {
+                id:7,
+                product:" iphone",
+                model:"Noise Pulse Go Buzz Smart",
+                price:1000,
+                image:"https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQx8tPi2UE9CJxI60e6gXOIkF5IfixwMZ8WXe3uN9x1H8_qFNXgvtStPk6GUppi6-jnu80gMC9IZjHf6jQzozqvxYGsKK8j3dn8k6zyX45OymtjOTr8LvIP"
+              },
+
+              {
+                id:8,
+                product:" iphone",
+                model:"beatXP Nuke 1.30",
+                price:90000,
+                image:"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR1Tm-Cr6FxHNeAIGendE-oRLSSZ4qC5OVUfkkkUkl4YcZltizDoE5If0ct4_xT6gzEGDfMbtG5SJ9rG5MB1EfAzEOJbz8EzkGMHF7USzdOXUmKeAu4CokZ"
+              },
+
+              {
+                id:9,
+                product:" iphone",
+                model:"Fire-Boltt Hurricane Smartwatch",
+                price:90000,
+                image:"https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQhvrUtNwnZuNqzm99DN24-BkhgfL2CWGpa0XkU2dlI_8RpYN7CWPgKfmhSE7xsjJN0KBfpu1wiCEHX0DSMYLUAg1Cs2S32biy2NHGLm77k0hGr6LWwXrMc"
+              },
+
+              {
+                id:10,
+                product:" iphone",
+                model:"pTron Bassbuds",
+                price:500,
+                image:"https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTuZpdSBNjtdrXLkc769c4w08cxHquMkFib2_8LCuFIuwTmnwf4_whzQ1Pu6PwN7tjM1ehL_vn93h3re8iR0JeKPawWfXj8E6c8_F3WiPKQUYw1keDJ4DD_7w&usqp=CAE"
+              },
+
+
+              {
+                id:11,
+                product:" iphone",
+                model:"boAt Immortal 201",
+                price:700,
+                image:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ2HfMNuoKIBkKjnaLV3SMYve92ZW9vRrTCrAkAKSV55wrsyc_VB3XLpOb6ot5ciFRJppN9L4T7QorvqX8V0m-OtJJoPW56C86yejiXOW33vUbwmM9r7Lo3&usqp=CAE"
+              },
+
+
+              {
+                id:12,
+                product:" iphone",
+                model:"Ezerio Air 45",
+                price:800,
+                image:"https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSWvWlbBiGRLUSd-lZhQkX3JCeTd-979mMIK_6PBHwNy6Mp_sr1PurSjVhGz-WoXHZoNA5dfhXPYKooppCug8NdA3oGe0owKJLlKEmf6Yel&usqp=CAE"
+              },
+
+              {
+                id:13,
+                product:" Motorola Razr",
+                model:"Speaker 12 W Bluetooth Party Speaker",
+                price:90000,
+                image:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTEPd44hcnXqytXTuq-iJ5NqV-gaR-N3PvgrleMsN2bIgDe0Mj2SC1Pvuj8ls_gs4IqD8vNFSu1Jhq26hvwmOZ7dGFk_KEXXkYzrrb9-fScqyJU8ws0YnnXJg&usqp=CAE"
+              },
+
+
+              {
+                id:14,
+                product:" Motorola Razr",
+                model:"Sfz Twin Paired Dynamic Metal 9d ",
+                price:90000,
+                image:"https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ9tke2I1xO-priJchUNGUuq197EKJZ5ARcsa_Tt_Kpn39imuytC6LRipEMplcCTOKFhi-1K8z_3eXEt5TTvgXZy2BsTCVD0JlFCFI29e4&usqp=CAE"
+              },
+
+
+              {
+                id:15,
+                product:" Motorola Razr",
+                model:"Drawnbluetooth Speakers ",
+                price:90000,
+                image:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSwmnYRMZs-ODA8-CLgKT9ukCZRdIqhqCF9IE9HY0lNHmNNUKiORGQKLX7hFL31_MS8l99e4_h_yPhfn-J3U0Xvf9tcyQZDhbCJAU8xqdQ&usqp=CAE"
+              },
+
+              // {
+              //   id:6,
+              //   product:" Motorola Razr",
+              //   model:"redmi 12",
+              //   price:90000,
+              //   image:"https://m.media-amazon.com/images/I/815UZPn8WUL._AC_UL320_.jpg"
+              // },
+
+
+
+              // {
+              //   id:6,
+              //   product:" Motorola Razr",
+              //   model:"redmi 12",
+              //   price:90000,
+              //   image:"https://m.media-amazon.com/images/I/61NrBEl0SrL._AC_UL320_.jpg"
+                
+              // },
+
+
+
+
+              // {
+              //   id:6,
+              //   product:" Motorola Razr",
+              //   model:"redmi 12",
+              //   price:90000,
+              //   image:"https://m.media-amazon.com/images/I/81yJVI6Za5L._AC_UL320_.jpg"
+              // },
+
+]
+
+
+            const con = document.getElementById('container');
+    for(pro of store)
+    {
+        con.innerHTML+=`<div class="pro">
+            <img src=${pro.image}  width="300" ,height="100px">
+            <br>
+            <p>${pro.model}</p>
+           <p>${pro.price}</p>
+           
+           <button onclick=cart(${pro.id})>Add To Cart</button>
+            </div>`
+          }
+          let cartNum=0;
+  let cartDom=document.getElementById('btn');
+    let arr=[];
+     let cart=(proid)=>{
+    //   console.log(id);
+    cartNum++;
+    cartDom.innerHTML=cartNum;
+
+        arr.push(store[proid-1]);
+        localStorage.setItem("data",JSON.stringify(arr));
+    }
+
+//  let val = document.getElementById('container')
+//            let i=0;
+//            let inc=()=>{
+//             ++i;
+//             val.innerHTML==i;
+//            }
+           
+
+//            let dec=()=>{
+//             --i;
+//             val.innerHTML=i;
+
+//            }
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

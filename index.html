@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form action="./jeeva.html" id="form">
+            <h1>Register</h1>
+            <div class="input-group">
+                <label for="username">username</label>
+                <input type="text" id="username" name="username" required>
+                <div class="error"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="phone">phone number</label>
+                <input type="text" id="phone" name="phone" required>
+                <div class="error"></div>
+            </div>
+
+
+            <div class="input-group">
+                <label for="email">email</label>
+                <input type="text" id="email" name="email" required>
+                <div class="error"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="password">password</label>
+                <input type="password" id="password" name="password" required>
+                <div class="error"></div>
+            </div>
+            <div class="input-group">
+                <label for="cpassword">confirm password</label>
+                <input type="password" id="cpassword" name="cpassword">
+                <div class="error"></div>
+                <button type="submit">Register</button>
+                <button type="submit">Cancel</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

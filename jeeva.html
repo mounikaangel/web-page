@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order food online from India's best food delivery service. Order from restaurants near you</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: ProximaNova, Arial, "Helvetica Neue", sans-serif;
+        }
+        .box {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+        }
+        .left {
+            height: 540px;
+            width: 100%;
+        }
+        .right {
+            background-image: url(https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_1340/Breakfast1-new_q6cje7);
+            background-position: top;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .top {
+            height: 132px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .logo img {
+            width: 191px;
+            height: 57px;
+            margin: 50px 0px 0px 0px;
+        }
+        .buttons {
+            margin: 63px 0px 0px 0px;
+            width: 180px;
+            height: 42px;
+            font-family: ProximaNova, Arial, "Helvetica Neue", sans-serif;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-around;
+        }
+        .buttons a {
+            text-decoration: none;
+            padding: 10px 18px 0px 18px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        #btn1 {
+            color: #000;
+        }
+        #btn1:hover {
+            color: #fc8019;
+        }
+        #btn2 {
+            background-color: #000;
+            color: #fff;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
+        }
+        .text {
+            display: flex;
+            flex-direction: column;
+            width: 621px;
+            height: 94px;
+            margin: 10px auto;
+            margin: 25px auto;
+        }
+        .text h1 {
+            font-size: 40px;
+            font-weight: 600;
+            color: #282c3f;
+        }
+        .text p {
+            font-size: 24px;
+            font-weight: 300;
+            color: #686b78;
+            padding: 10px 0px 0px 0px;
+        }
+        .location-box {
+            display: flex;
+            width: 621px;
+            height: 60px;
+            margin: auto;
+        }
+        .location-box:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        .location-search {
+            width: 480px;
+            border: 1px solid #7E808C;
+            border-right: none;
+        }
+        .location-search:hover {
+            border: 1px solid #fc8019;
+            border-right: none;
+        }
+        .location-search input[type="text"] {
+            width: 480px;
+            height: 58px;
+            border: none;
+            font-size: 18px;
+            padding: 0px 0px 0px 10px;
+            outline: none;
+            caret-color: #fc8019;
+        }
+        .location-button {
+            width: 140px;
+            background-color: #fc8019;
+            padding: 20px 0px 0px 0px;
+        }
+        .location-button a {
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0px 0px 3px 20px;
+            padding: 1px 7px 22px 7px;
+        }
+        .bottom {
+            width: 621px;
+            height: 88px;
+            display: flex;
+            flex-direction: column;
+            margin: 35px auto;
+        }
+        .bottom h4 {
+            font-size: 15px;
+            font-weight: 400;
+            color: #a9abb2;
+        }
+        ul {
+            /* display: flex; */
+            list-style: none;
+            margin: 11px 0px 0px 0px;
+            height: 50px;
+        }
+        li {
+            display: inline;
+            padding: 0px 1px 0px 1px;
+        }
+        li a:hover {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: #93959f;
+        }
+        .function {
+            display: flex;
+            justify-content: space-around;
+            height: 400px;
+            background-color: #2B1E16;
+        }
+        .fun-box {
+            width: 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /* .fun-box img {} */
+        .fun-box h4 {
+            color: #fff;
+            font-weight: 600;
+            font-size: 20px;
+            text-align: center;
+            padding: 50px 0px 15px 0px;
+        }
+        .fun-box p {
+            color: #e0cbc1;
+            font-size: 15px;
+            text-align: center;
+        }
+        .app {
+            height: 570px;
+            display: grid;
+            grid-template-columns: 47fr 53fr;
+        }
+        .app-text {
+            display: flex;
+            flex-direction: column;
+            height: 225px;
+            margin: auto;
+        }
+        .app-text h1 {
+            font-size: 40px;
+            color: #282c3f;
+            font-weight: 600;
+            padding: 0px 0px 22px 6px;
+        }
+        .app-text p {
+            font-size: 20px;
+            font-weight: 300;
+            color: #7e808c;
+            padding: 0px 0px 34px 6px;
+        }
+        .app-button {
+            padding: 12px 0px 0px 2px;
+            margin: 0px 0px 0px 5px;
+        }
+        .app-image {
+            display: flex;
+            align-items: center;
+        }
+        footer {
+            height: 400px;
+            width: 100%;
+            display: flex;
+            background-color: #000000;
+            justify-content: space-around;
+        }
+        .points {
+            color: #808080;
+            font-size: 15px;
+            font-weight: 600;
+            width: 300px;
+            margin: 26px 0px 10px 15px;
+        }
+        .footer-li {
+            padding: 20px 10px 2px 0px;
+        }
+        .footer-ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+        }
+        .footer-li a {
+            color: #fff;
+            font-size: 17px;
+            font-weight: 500;
+        }
+        .footer-li a:hover {
+            font-weight: 600;
+        }
+        .points img {
+            border: 2px solid #808080;
+            padding: 10px;
+            margin: 30px 0px 10px 57px;
+            border-radius: 10px;
+            transition: transform .5s;
+        }
+        .points img:hover {
+            transform: scale(1.06);
+            cursor: pointer;
+        }
+        /* Styles for Login Form */
+        .login-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .login-modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px;
+        }
+        .login-modal-content input[type="text"], .login-modal-content input[type="password"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .login-modal-content button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        .login-modal-content button:hover {
+            opacity: 0.8;
+        }
+        .login-modal-content .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+        .login-modal .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+        .login-modal .close:hover, .login-modal .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+        /* New styles for cart icon and page */
+        .cart-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 24px;
+            color: #fc8019;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .cart-count {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: red;
+            color: #fff;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+        .products, .cart {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .products .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 10px;
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .products .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .products .product button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+            background-color: #fc8019;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+        .cart {
+            background-color: #f9f9f9;
+            padding: 10px;
+        }
+        .cart h2 {
+            margin-bottom: 10px;
+        }
+        .cart ul {
+            list-style: none;
+            padding: 0;
+        }
+        .cart li {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section -->
+    <div class="box">
+        <div class="left">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Swiggy_logo.svg/2560px-Swiggy_logo.svg.png" alt="Swiggy Logo">
+                </div>
+                <div class="buttons">
+                    <a href="#" id="btn1" onclick="document.getElementById('loginModal').style.display='block'">Login</a>
+                    <a href="./index.html" id="btn2">Sign up</a>
+                </div>
+            </div>
+            <div class="text">
+                <h1>Unexpected guests?</h1>
+                <p>Order food from favourite restaurants near you.</p>
+            </div>
+            <div class="location-box">
+                <div class="location-search">
+                    <input type="text" placeholder="Enter your delivery location">
+                </div>
+                <div class="location-button">
+                    <a href="#">FIND FOOD</a>
+                </div>
+            </div>
+            <div class="bottom">
+                <h>POPULAR FOOD IN INDIA</h2>
+                <ul>
+                    <li><a href="#">Biriyani </a></li>
+                    <li><a href="#">Matar Paneer </a></li>
+                    <li><a href="#">Chicken Makhani </a></li>
+                    <li><a href="#">Pongal</a></li>
+                    <li><a href="#">curry</a></li>
+                    <li><a href="#">Samosa </a></li>
+                    <li><a href="#">Uttapam </a></li>
+                    <li><a href="#">Pani Puri</a></li>
+                    <li><a href="#">Naan </a></li>
+                    <li><a href="#">Lassi</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right"></div>
+    </div>
+    <!-- Products Section -->
+    <div class="products">
+        <h2>What's on your mind</h2>
+        <br><br>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMw89wmZrpSqiR4-p91FnxHKXGB3GUrc_1nw&usqp=CAU" alt="Product 1">
+            <span>Product 1</span>
+            <button onclick="addToCart('Product 1')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTykHfDQdW4g1a30hanJdp72lwHnwXHD17qmg&usqp=CAU" alt="Product 2">
+            <span>Product 2</span>
+            <button onclick="addToCart('Product 2')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkTzvbCWtpEmxUGC3MqxlMjuGE8lp_NDJRJw&usqp=CAU" alt="Product 3">
+            <span>Product 3</span>
+            <button onclick="addToCart('Product 3')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7kw4laEpvhYxegnydb8B6HciKmCaG3AaHzg&usqp=CAU" alt="Product 4">
+            <span>Product 4</span>
+            <button onclick="addToCart('Product 4')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDCJKg5m23NlPb2M4ya9bE9CzliJI8K9IujQ&usqp=CAU" alt="Product 5">
+            <span>Product 5</span>
+            <button onclick="addToCart('Product 5')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTifF8W8vZ6zY8R_M5FlvpZ6WUjEbtja-FZsQ&usqp=CAU" alt="Product 6">
+            <span>Product 6</span>
+            <button onclick="addToCart('Product 6')">Add to Cart</button>
+        </div>
+        
+    </div>
+
+    
+    <!-- Cart Icon -->
+    <div class="cart-icon" onclick="openCartPage()">
+        🛒
+        <div class="cart-count" id="cartCount">0</div>
+    </div>
+    <!-- Login Modal -->
+    <div id="loginModal" class="login-modal">
+        <div class="login-modal-content">
+            <span onclick="document.getElementById('loginModal').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <form>
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <button type="submit">Login</button>
+                <button type="button" onclick="document.getElementById('loginModal').style.display='none'" class="cancelbtn">Cancel</button>
+            </form>
+        </div>
+    </div>
+    <!-- JavaScript for Add to Cart functionality -->
+    <script>
+        const cart = [];
+
+        function addToCart(product) {
+            cart.push(product);
+            updateCartDisplay();
+            updateCartCount();
+        }
+
+        function updateCartDisplay() {
+            const cartItems = document.getElementById('cartItems');
+            if (cartItems) {
+                cartItems.innerHTML = '';
+                cart.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    cartItems.appendChild(li);
+                });
+            }
+        }
+
+        function updateCartCount() {
+            document.getElementById('cartCount').innerText = cart.length;
+        }
+
+        function openCartPage() {
+            let cartPage = `
+                <div class="cart">
+                    <h2>Cart</h2>
+                    <ul id="cartItems">
+                        ${cart.map(item => <li>${item}</li>).join('')}
+                    </ul>
+                    <button onclick="closeCartPage()">Close</button>
+                </div>
+            `;
+            document.body.innerHTML = cartPage;
+        }
+
+        function closeCartPage() {
+            location.reload();
+        }
+
+        // Close the modal when the user clicks anywhere outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('loginModal');
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+
+
+
+</body>
+</html>
